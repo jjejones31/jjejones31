@@ -37,6 +37,102 @@
         background-color: #ddd;
         color: black;
     }
+
+    .header {
+        padding: 80px;
+        text-align: center;
+        background: #2980ea;
+        color: white;
+        border-bottom: 1px solid #ddd;
+    }
+    .header h1 {
+        font-size: 40px
+    }
+
+    .body-container {
+        display: flex; /* Use Flexbox to layout children */
+        padding: 40px 20px; /* Padding around the body content */
+        background: white;
+        color: black;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .body-left {
+        flex: 0 0 30%;
+        background: #2980ea;
+    }
+
+    .body-right {
+        flex: 1;
+    }
+
+    .body1 {
+        padding: 40px 20px; /* Padding around the body content */
+        text-align: left;
+        background: #2980ea;
+        color: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .body1 h1 {
+        font-size: 32px; /* Font size for section titles */
+        margin-bottom: 20px; /* Space below section titles */
+    }
+    .body1 p {
+        font-size: 18px; /* Font size for paragraph text in body sections */
+        line-height: 1.6; /* Line height for better readability */
+    }
+
+    .body2 {
+        padding: 40px 20px; /* Padding around the body content */
+        text-align: right;
+        background: #139344;
+        color: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .body2 h1 {
+        font-size: 32px; /* Font size for section titles */
+        margin-bottom: 20px; /* Space below section titles */
+    }
+    .body2 p {
+        font-size: 18px; /* Font size for paragraph text in body sections */
+        line-height: 1.6; /* Line height for better readability */
+    }
+
+    .body3 {
+        padding: 40px 20px; /* Padding around the body content */
+        text-align: left;
+        background: #7a362f;
+        color: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .body3 h1 {
+        font-size: 32px; /* Font size for section titles */
+        margin-bottom: 20px; /* Space below section titles */
+    }
+    .body3 p {
+        font-size: 18px; /* Font size for paragraph text in body sections */
+        line-height: 1.6; /* Line height for better readability */
+    }
+
+    .body4 {
+        padding: 40px 20px; /* Padding around the body content */
+        text-align: right;
+        background: #e17eef;
+        color: white;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .body4 h1 {
+        font-size: 32px; /* Font size for section titles */
+        margin-bottom: 20px; /* Space below section titles */
+    }
+    .body4 p {
+        font-size: 18px; /* Font size for paragraph text in body sections */
+        line-height: 1.6; /* Line height for better readability */
+    }
 </style>
 </head>
 <body>
@@ -48,8 +144,31 @@
         </ul>
     </nav>
 
-<h1>Welcome to My Website</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="https://github.com/jjejones31/Autonomous-Robot-Math-Solver">Robotics</a></li>
+            <li><a href="https://github.com/jjejones31/comp_systems_project">Computer Systems</a></li>
+            <li><a href="https://github.com/jjejones31/sunshine_productivity">Sunshine</a></li>
+            <li><a href="https://github.com/jjejones31/time_dependent_data_project">TDD</a></li>
+            <li><a href="https://github.com/jjejones31/jjejones31/blob/main/tutoring.html">Tutoring</a></li>
+        </ul>
+    </nav>
 
-<p1>This is my main page, but it currently functions as a link to my developing tutoring website. Visit it <a href="https://jjejones31.github.io/jjejones31/tutoring">here</a>.</p1>
+    <div class="header">
+        <h1>welcome!</h1>
+        <p>this is my main page, where you can find my projects, both in progress and completed.</p>
+    </div>
+
+    <div class="body-container">
+        <div class="body-left">
+            <!-- Smaller information goes here -->
+            <h2>Autonomous Robot Math Solver</h2>
+        </div>
+        <div class="body-right">
+            <!-- Description or main content goes here -->
+            <p>Main content or description details here...</p>
+        </div>
+    </div>
+
 </body>
 </html>
