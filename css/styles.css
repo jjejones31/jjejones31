@@ -3,11 +3,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #b5b5b5; /* Light gray background */
 }
 
 header {
-    background-color: #4CAF50;
+    background-color: #000000;
     color: white;
     padding: 10px 0;
     text-align: center;
