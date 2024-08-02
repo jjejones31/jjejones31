@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #f0f0f0; /* Light gray background */
 }
 
 header {
@@ -10,6 +11,7 @@ header {
     color: white;
     padding: 10px 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 main {
@@ -28,20 +30,29 @@ main {
     padding: 20px;
     width: 200px;
     cursor: pointer;
-    transition: all 0.5s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     overflow: hidden;
+    border-radius: 8px; /* Rounded corners */
+    background-color: #ffffff; /* White background */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .project-box h2 {
     margin-top: 0;
+    font-size: 1.2em;
 }
 
 .project-box .description {
     display: none;
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-top: 10px;
 }
 
 .project-box.expanded {
     width: 100%;
+    transform: scale(1.05); /* Scale up slightly on expand */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
 }
 
 .project-box.expanded .description {
