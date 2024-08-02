@@ -1,3 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Document is ready!');
+    const projectBoxes = document.querySelectorAll('.project-box');
+
+    projectBoxes.forEach(box => {
+        box.addEventListener('click', () => {
+            box.classList.toggle('expanded');
+        });
+    });
 });

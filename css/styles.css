@@ -16,12 +16,34 @@ main {
     padding: 20px;
 }
 
-.project {
-    border: 1px solid #ddd;
-    margin: 10px 0;
-    padding: 10px;
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
-.project h2 {
+.project-box {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.project-box h2 {
     margin-top: 0;
+}
+
+.project-box .description {
+    display: none;
+}
+
+.project-box.expanded {
+    width: 100%;
+}
+
+.project-box.expanded .description {
+    display: block;
 }
