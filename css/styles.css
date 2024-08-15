@@ -45,6 +45,21 @@ section {
     transition: transform 0.1s ease-out;
 }
 
+/* Container for the arrow and text */
+#scroll-container {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* Styling for the scroll text */
+#scroll-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
 /* Arrow styling */
 #scroll-arrow {
     font-size: 2rem;
