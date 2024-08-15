@@ -7,6 +7,70 @@ document.addEventListener('mousemove', (e) => {
     document.body.classList.add('mouse-active');
 });
 
+let scrollLock = true; // Initially lock the scroll
+const scrollThreshold = window.innerHeight * 0.3; // 30% of the viewport height
+const arrow = document.getElementById('scroll-arrow');
+let scrollTimeout;
+
+// Function to handle scroll behavior
+function handleScroll(event) {
+    const scrollPosition = window.scrollY;
+
+    if (scrollLock) {
+        if (scrollPosition > scrollThreshold) {
+            scrollLock = false;
+            arrow.classList.add('up'); // Flip the arrow
+        } else {
+            // Allow scrolling but prepare to reset after scrolling stops
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                if (scrollPosition <= scrollThreshold) {
+                    window.scrollTo(0, 0); // Reset scroll position to the top of the intro section
+                }
+            }, 100); // Delay to ensure the user has stopped scrolling
+        }
+    }
+}
+
+// Unlock the scroll when the arrow is clicked
+arrow.addEventListener('click', () => {
+    scrollLock = false;
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: 'smooth'
+    });
+});
+
+// Prevent default scrolling until the user has scrolled far enough
+window.addEventListener('scroll', handleScroll);
+
+// Function to check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to toggle visibility based on viewport presence
+function toggleVisibility() {
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach(box => {
+        if (isInViewport(box)) {
+            box.classList.add('visible');
+        } else {
+            box.classList.remove('visible');
+        }
+    });
+}
+
+// Check visibility on scroll and on page load
+window.addEventListener('scroll', toggleVisibility);
+window.addEventListener('load', toggleVisibility);
+
 // Mouse movement ripple effect
 
 let lastMove = 0;
